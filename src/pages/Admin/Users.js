@@ -10,7 +10,7 @@ const Users = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/v1/auth/allUser');
+                const response = await fetch('http://process.env.BACKEND_URL/api/v1/auth/allUser');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
